@@ -1,0 +1,610 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* End Font Family */
+
+/* Base Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --header-link-color: #3AC1B0;
+    --section-color: #1F9E80;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 95%;
+    max-width: 95%;
+    margin-inline: auto;
+}
+
+body.open {
+    overflow: hidden;
+}
+
+/* End Base Styles */
+
+/* Hamburger Menu */
+.mobile-hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: var(--header-link-color);
+    display: block;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-hamburger:hover {
+    cursor: pointer;
+}
+
+#hamburger {
+    transition: all 0.3s ease-in-out;
+}
+
+#hamburger.is-active {
+    -webkit-animation: smallbig 0.6s forwards;
+    animation: smallbig 0.6s forwards;
+}
+
+@-webkit-keyframes smallbig {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+}
+
+@keyframes smallbig {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+}
+
+#hamburger.is-active .line:nth-child(1),
+#hamburger.is-active .line:nth-child(2),
+#hamburger.is-active .line:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+#hamburger.is-active .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger.is-active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger.is-active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* End Hamburger Menu */
+
+/* Hide Desktop Header */
+.desktop-header {
+    display: none;
+}
+
+/* End Hide Desktop Header */
+
+/* Mobile Header */
+.mobile-header {
+    position: relative;
+    padding: 1rem 0;
+    background-color: #fff;
+    height: 10vh;
+}
+
+.mobile-header-logo-hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo {
+    width: 200px;
+    height: 40px;
+}
+
+.mobile-nav {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 10vh;
+    z-index: 99;
+}
+
+.mobile-nav.open {
+    display: block;
+}
+
+.mobile-header-links-items {
+    width: 100%;
+    height: 100%;
+}
+
+.mobile-header-links-item {
+    border-top: 2px solid #efefef;
+}
+
+.mobile-header-links-item:last-child {
+    border-bottom: 2px solid #efefef;
+}
+
+.mobile-header-links-item a {
+    width: 100%;
+    font-weight: 700;
+    display: inline-block;
+    padding: 1rem;
+    color: var(--header-link-color);
+}
+
+/* End Mobile Header */
+
+/* Banner */
+.banner-background {
+    position: relative;
+    background-color: var(--section-color);
+}
+
+.banner-row-background {
+    background-image: url(/img/banner-background.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 30vh;
+}
+
+.banner-text-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    color: #fff;
+}
+
+.banner-text-area-h1 {
+    margin-bottom: .5rem;
+}
+
+.banner-waitlist {
+    margin-top: 1rem;
+}
+
+.banner-waitlist-p {
+    margin-bottom: .3rem;
+}
+
+.banner-waitlist-p span {
+    font-weight: 600;
+}
+
+.banner-waitlist-input input[type="text"] {
+    padding: .5rem;
+    border-radius: 1em 0 0 1em;
+    border: none;
+    outline: none;
+    margin-bottom: .5rem;
+}
+
+.banner-waitlist-input input[type="submit"] {
+    padding: .5rem;
+    border-radius: 0 1em 1em 0;
+    border: none;
+    margin-left: -10px;
+    outline: none;
+    margin-bottom: .5rem;
+    background-color: #FF8D23;
+    color: #fff;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+/* End Banner */
+
+/* How It Works */
+.how-it-works-background {
+    background-color: var(--section-color);
+    position: relative;
+    z-index: 0;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+.how-it-works-wave {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.how-it-works-chevron {
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+}
+
+.how-it-works-chevron img {
+    width: 10%;
+}
+
+.how-it-works-h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+
+.how-it-works-col {
+    margin-bottom: 1.5rem;
+}
+
+.how-it-works-col-img {
+    text-align: center;
+}
+
+.how-it-works-col-img {
+    border: 1px solid rgba(239, 239, 238, .5);
+    border-radius: .3em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.how-it-works-col-img img {
+    object-fit: none;
+    display: block;
+}
+
+.how-it-works-col-h2 {
+    margin: .5rem 0;
+}
+
+.how-it-works-col-p {
+    margin-bottom: .5rem;
+}
+
+.how-it-works-col-a {
+    color: #fff;
+    font-weight: 800;
+}
+
+.how-it-works-col-a:hover {
+    color: #FF8D23;
+}
+
+/* End How It Works */
+
+/* Subscribe Banner */
+.subscribe-banner-background {
+    background-color: #fff;
+    position: relative;
+    padding: 2rem 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.subscribe-banner-circle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.subscribe-banner-h2 {
+    color: #037459;
+}
+
+.subscribe-banner-h2 span {
+    font-weight: 800;
+}
+
+.subscribe-banner-col {
+    margin-bottom: .5rem;
+}
+
+.subscribe-banner-input {
+    display: flex;
+}
+
+.subscribe-banner-input input[type="text"] {
+    padding: .5rem;
+    border-radius: 1em;
+    border-top: 1px solid #FF8D23;
+    border-left: 1px solid #FF8D23;
+    border-bottom: 1px solid #FF8D23;
+    border-right: none;
+    outline: none;
+}
+
+.subscribe-banner-input input[type="submit"] {
+    padding: .5rem;
+    border-radius: 0 1em 1em 0;
+    border: none;
+    outline: none;
+    background-color: #FF8D23;
+    color: #fff;
+    font-weight: 700;
+    margin-left: -10px;
+}
+
+/* End Subscribe Banner */
+
+/* Our Technology */
+.our-technology-background {
+    background-color: var(--section-color);
+    color: #fff;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.our-technology-wave {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.our-technology-h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.our-technology-col {
+    margin-bottom: 3rem;
+}
+
+.our-technology-img {
+    position: relative;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.our-technology-img img:nth-child(1) {
+    width: 80%;
+}
+
+.our-technology-img img:nth-child(2) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+}
+
+.our-technology-h2 {
+    text-align: center;
+}
+
+/* End Our Technology */
+
+/* Start Feeling Better */
+.feeling-better-background {
+    background-color: var(--section-color);
+    position: relative;
+    z-index: 0;
+    padding: 2rem 0;
+    color: #fff;
+}
+
+.feeling-better-circle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.feeling-better-wave-2 {
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    z-index: -1;
+}
+
+.feeling-better-h1-wave {
+    margin-bottom: 1rem;
+}
+
+.feeling-better-h1 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: max-content;
+    margin-inline: auto;
+    font-size: 1.3rem;
+}
+
+.feeling-better-wave {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 80%;
+    transform: translateX(-50%);
+}
+
+.feeling-better-row {
+    position: relative;
+    z-index: 0;
+}
+
+.feeling-better-center-circle {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    z-index: -1;
+    opacity: .3;
+}
+
+.feeling-better-col-p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* End Start Feeling Better */
+
+/* App Promotion */
+.app-promotion-background {
+    background-image: url(/img/app-promotion-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 0;
+}
+
+.app-promotion-circle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.app-promotion-col {
+    margin-bottom: 2rem;
+}
+
+.app-promotion-col-h2 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.app-promotion-col-h2 span {
+    font-weight: 700;
+}
+
+.app-promotion-google-play img,
+.app-promotion-app-store img {
+    width: 60%;
+}
+
+/* End App Promotion */
+
+/* Our Partners */
+.our-partners-background {
+    padding: 2rem 0;
+    background-color: var(--section-color);
+    position: relative;
+    z-index: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.our-partners-circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.our-partners-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.our-partners-h1 {
+    margin-bottom: 2rem;
+}
+
+.our-partners-col {
+    margin-bottom: 2rem;
+}
+
+.our-partners-col-partner {
+    width: fit-content;
+    margin-inline: auto;
+    padding: 1rem;
+    border: 5px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    margin-bottom: .5rem;
+}
+
+.our-partners-col-partner:hover img {
+    transform: scale(1.07);
+}
+
+/* End Our Partners */
+
+/* Footer */
+.footer-background {
+    background-color: #11876B;
+    color: #fff;
+}
+
+.footer-background a {
+    color: #fff;
+}
+
+.footer-top-row {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+.footer-top-logo {
+    margin-bottom: .5rem;
+}
+
+.footer-top-logo img {
+    width: 200px;
+    height: 40px;
+}
+
+.footer-top-links-item {
+    margin-bottom: .5rem;
+}
+
+.footer-top-links-item:last-child {
+    margin-bottom: initial;
+}
+
+.footer-bottom-row {
+    padding: 1rem 0;
+}
+
+.footer-bottom-col {
+    margin-bottom: .5rem;
+}
+
+.footer-bottom-social-links-items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* End Footer */
