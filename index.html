@@ -9,6 +9,15 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- End Link Font Awesome -->
+
+    <!-- VideoJS -->
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+    <!-- End VideoJs -->
+
+    <!-- Link Forest VideoJS -->
+    <link rel="stylesheet" href="forest/index.css">
+    <!-- End Link Forest VideoJS -->
+
     <!-- Link Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
     <!-- End Link Stylesheet -->
@@ -19,20 +28,24 @@
     <!-- Desktop Header -->
     <header class="desktop-header">
         <div class="container">
-            <div class="desktop-header-logo">
-                <img src="img/logo/logo.svg" alt="MTM BioTech Logo">
-            </div>
-            <ul class="desktop-header-links-items">
-                <li class="desktop-header-links-item">
-                    <a href="our-tech.html" class="desktop-header-link">Our Tech</a>
-                </li>
-                <li class="desktop-header-links-item">
-                    <a href="team.html" class="desktop-header-link">Team</a>
-                </li>
-                <li class="desktop-header-links-item">
-                    <a href="blog.html" class="desktop-header-link">Blog</a>
-                </li>
-            </ul>
+            <nav class="desktop-header-nav">
+                <div class="desktop-header-logo">
+                    <a href="index.html">
+                        <img src="img/logo/logo.svg" alt="MTM BioTech Logo">
+                    </a>
+                </div>
+                <ul class="desktop-header-links-items">
+                    <li class="desktop-header-links-item">
+                        <a href="our-tech.html" class="desktop-header-link">Our Tech</a>
+                    </li>
+                    <li class="desktop-header-links-item">
+                        <a href="team.html" class="desktop-header-link">Team</a>
+                    </li>
+                    <li class="desktop-header-links-item">
+                        <a href="blog.html" class="desktop-header-link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <!-- End Desktop Header -->
@@ -198,7 +211,7 @@
                 </h1>
             </div>
             <div class="feeling-better-row">
-                <img src="img/feeling-better-center-circle.svg" alt="" class="feeling-better-center-circle">
+                <img src="img/feeling-better-center-circle.png" alt="" class="feeling-better-center-circle">
                 <div class="feeling-better-col">
                     <img src="img/feeling-better-phones.png" alt="">
                 </div>
@@ -223,8 +236,14 @@
         <div class="container">
             <div class="app-promotion-row">
                 <div class="app-promotion-col">
-                    <video controls>
-                        <source src="../../Enxpresskargo/Final.3.mp4" type="video/mp4">
+                    <video class="video-js vjs-theme-forest" id="my-video" class="video-js" controls preload="auto"
+                        poster="video/video-background.jpg" data-setup="{}">
+                        <source src="video/video.mp4" type="video/mp4">
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
                     </video>
                 </div>
                 <div class="app-promotion-col">
@@ -247,7 +266,7 @@
 
     <!-- Our Partners -->
     <div class="our-partners-background">
-        <img src="img/our-partners-circle.svg" alt="" class="our-partners-circle">
+        <img src="img/our-partners-circle.png" alt="" class="our-partners-circle">
         <img src="img/our-partners-wave.svg" alt="" class="our-partners-wave">
         <div class="container">
             <h1 class="our-partners-h1">Our Partners</h1>
@@ -328,6 +347,10 @@
         </div>
     </div>
     <!-- End Footer -->
+
+    <!-- VideoJs Script -->
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+    <!-- End VideoJs Script -->
 
     <!-- Main Script -->
     <script src="js/main.js"></script>
