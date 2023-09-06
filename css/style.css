@@ -1153,6 +1153,10 @@ body.open {
     .feeling-better-col-p {
         font-size: 3rem;
     }
+	
+	.feeling-better-h1{
+		font-size: 3em;
+	}
 
     .feeling-better-circle {
         width: 20%;
