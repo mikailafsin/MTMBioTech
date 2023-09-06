@@ -185,7 +185,7 @@ body.open {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 30vh;
+    height: 40vh;
 }
 
 .banner-text-area {
@@ -256,6 +256,7 @@ body.open {
     display: flex;
     justify-content: center;
     padding: .5rem 0;
+    margin-bottom: 1rem;
 }
 
 .how-it-works-chevron img {
@@ -265,7 +266,7 @@ body.open {
 .how-it-works-h1 {
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
 }
 
 .how-it-works-col {
@@ -286,8 +287,7 @@ body.open {
 }
 
 .how-it-works-col-img img {
-    object-fit: none;
-    display: block;
+    width: 100%;
 }
 
 .how-it-works-col-h2 {
@@ -498,6 +498,10 @@ body.open {
     margin-bottom: 2rem;
 }
 
+.app-promotion-col:nth-child(2) {
+    text-align: center;
+}
+
 .app-promotion-col-h2 {
     color: #fff;
     font-weight: 400;
@@ -542,8 +546,16 @@ body.open {
     margin-bottom: 2rem;
 }
 
+.our-partners-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
 .our-partners-col {
-    margin-bottom: 2rem;
+    flex: 0 0 auto;
+    width: calc(50% - .5rem);
 }
 
 .our-partners-col-partner {
