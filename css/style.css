@@ -268,12 +268,28 @@ body.open {
     position: absolute;
     top: 0;
     width: 10%;
+    -webkit-animation-name: chevronAnimation;
     animation-name: chevronAnimation;
+    -webkit-animation-delay: 300ms;
     animation-delay: 300ms;
+    -webkit-animation-duration: 500ms;
     animation-duration: 500ms;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+    -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes chevronAnimation {
+    from {
+        top: 0%;
+    }
+
+    to {
+        top: 100%;
+    }
 }
 
 @keyframes chevronAnimation {
@@ -477,6 +493,8 @@ body.open {
     position: relative;
     text-align: center;
     text-transform: uppercase;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     margin-inline: auto;
     font-size: 1.3rem;
@@ -557,6 +575,7 @@ body.open {
 
 /* VideoJs */
 .vjs-poster img {
+    -o-object-fit: cover;
     object-fit: cover;
     border-radius: 2em;
 }
@@ -580,6 +599,7 @@ body.open {
 }
 
 .video-js .vjs-tech {
+    -o-object-fit: fill;
     object-fit: fill;
 }
 
@@ -625,6 +645,8 @@ body.open {
 }
 
 .our-partners-col-partner {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin-inline: auto;
     padding: 1rem;
@@ -935,6 +957,7 @@ body.open {
     /* Desktop Header */
     .desktop-header {
         display: block;
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1;
@@ -1153,10 +1176,10 @@ body.open {
     .feeling-better-col-p {
         font-size: 3rem;
     }
-	
-	.feeling-better-h1{
-		font-size: 3em;
-	}
+
+    .feeling-better-h1 {
+        font-size: 3em;
+    }
 
     .feeling-better-circle {
         width: 20%;
