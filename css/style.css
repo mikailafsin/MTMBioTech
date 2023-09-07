@@ -329,10 +329,9 @@ body.open {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--section-color);
 }
 
-.how-it-works-col:nth-child(3) .how-it-works-col-img img {
+.how-it-works-col-img img {
     width: 100%;
 }
 
@@ -763,9 +762,74 @@ body.open {
 .our-tech-product-text-p {
     font-weight: 500;
     margin-bottom: 1em;
+    text-align: justify;
 }
 
 /* End Our Tech */
+
+/* Team */
+.team-about-us {
+    padding: 1rem 0;
+}
+
+.team-header {
+    text-transform: uppercase;
+    color: #FF8D23;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.team-about-us-p {
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+.team-our-team {
+    padding: 2rem 0;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.team-member {
+    flex: 0 0 auto;
+    width: calc(50% - .5rem);
+    text-align: center;
+    border: 1px solid #1F9E8080;
+    padding: 1rem .5rem;
+    border-radius: .5em;
+}
+
+.member-photo {
+    display: inline-flex;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-photo,
+.member-name,
+.member-position {
+    margin-bottom: 1rem;
+}
+
+.member-name,
+.member-position {
+    color: #178369;
+}
+
+.member-name {
+    font-weight: 600;
+}
+
+.member-position {
+    font-weight: 700;
+}
+
+/* End Team */
 
 /* Media Queries */
 
@@ -990,6 +1054,33 @@ body.open {
     }
 
     /* End Our Tech */
+
+    /* Team */
+    .team-banner-image {
+        height: 30vh;
+    }
+
+    .team-banner-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .team-about-us-p {
+        line-height: 40px;
+    }
+
+    .member-photo,
+    .member-name,
+    .member-position {
+        margin-bottom: 2rem;
+    }
+
+    .team-member {
+        width: calc(33.333% - .5rem);
+    }
+
+    /* End Team */
 }
 
 
@@ -1155,16 +1246,11 @@ body.open {
     }
 
     .how-it-works-col-img {
-        height: 25vh;
         border-radius: 1em;
     }
 
     .how-it-works-col:nth-child(2) .how-it-works-col-img {
         align-items: flex-end;
-    }
-
-    .how-it-works-col:nth-child(1) .how-it-works-col-img img {
-        width: 100%;
     }
 
     .how-it-works-wave {
@@ -1327,6 +1413,35 @@ body.open {
     }
 
     /* End Our Tech */
+
+    /* Team */
+    .team-about-us {
+        padding: 2rem 0;
+    }
+
+    .team-our-team {
+        padding: 2rem 0 8rem 0;
+    }
+
+    .team-banner-image {
+        height: 50vh;
+    }
+
+    .member-photo,
+    .member-name,
+    .member-position {
+        margin-bottom: 3rem;
+    }
+
+    .team-members {
+        gap: 3rem;
+    }
+
+    .team-member {
+        width: calc(33.333% - 3rem);
+    }
+
+    /* End Team */
 }
 
 /* End Media Queries */
