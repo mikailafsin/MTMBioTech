@@ -679,6 +679,10 @@ body.open {
     color: #fff;
 }
 
+.footer-top-link:hover {
+    color: #FF8E2F;
+}
+
 .footer-bottom-social-link {
     display: flex;
     align-items: center;
