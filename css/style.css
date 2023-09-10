@@ -132,7 +132,8 @@ body.open {
 
 /* Mobile Header */
 .mobile-header {
-    position: relative;
+    position: sticky;
+    top: 0;
     background-color: #fff;
     height: 10vh;
 }
@@ -902,6 +903,7 @@ body.open {
 .blog-box-p {
     margin-bottom: 1rem;
     color: #2D2D2D;
+    text-align: justify;
 }
 
 .blog-post-author {
@@ -951,6 +953,7 @@ body.open {
 .blog-post-content-p {
     margin-bottom: 1em;
     line-height: 20px;
+    text-align: justify;
 }
 
 .blog-post-read-next {
@@ -1770,6 +1773,24 @@ body.open {
     }
 
     /* End Blog Post */
+}
+
+@media (orientation: landscape) {
+    .mobile-header {
+        height: 15vh;
+    }
+
+    .mobile-header-logo-hamburger {
+        height: 15vh;
+    }
+
+    .banner-row-background {
+        height: 85vh;
+    }
+
+    .mobile-nav {
+        top: 15vh;
+    }
 }
 
 /* End Media Queries */
